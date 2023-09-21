@@ -1,28 +1,28 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title></title>
 <style>
+    #videoBox{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
     #videoCont{
         width: 100%;
-        height: 600px;
-        display: block;
-        margin:30% 0;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 </style>
 </head>
 <body>
-    <video id="videoCont" autoplay="autoplay" loop="loop">
-        <source type="video/mp4" src="./static/9-21.mp4">
-    </video>
+    <div id="videoBox">
+        <video id="videoCont" muted autoplay loop>
+            <source type="video/mp4" src="./static/9-21.mp4">
+        </video>
+    </div>
+    
 </body>
 <script>
-    var that=document.getElementById('videoCont');
-    if(window.WeixinJSBridge){
-        document.addEventListener(
-            'WeixinJSBridgeReady',
-            function(){
-                that.src="./static/9-21.mp4";
-            },
-            false
-        )
-    }
+    
 </script>
 </html>
