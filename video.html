@@ -13,4 +13,16 @@
         <source type="video/mp4" src="./static/9-21.mp4">
     </video>
 </body>
+<script>
+    var that=document.getElementById('videoCont');
+    if(window.WeixinJSBridge){
+        document.addEventListener(
+            'WeixinJSBridgeReady',
+            function(){
+                that.src="./static/9-21.mp4";
+            },
+            false
+        )
+    }
+</script>
 </html>
